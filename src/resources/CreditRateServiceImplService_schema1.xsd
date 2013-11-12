@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://poll.com/" xmlns:tns="http://poll.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="getCreditScoreAsync" type="tns:getCreditScoreAsync"/>
+
+  <xs:element name="getCreditScoreAsyncResponse" type="tns:getCreditScoreAsyncResponse"/>
+
+  <xs:complexType name="getCreditScoreAsync">
+    <xs:sequence>
+      <xs:element name="arg0" type="tns:customer" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="customer">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="getCreditScoreAsyncResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:score" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="score">
+    <xs:sequence>
+      <xs:element name="rate" type="xs:decimal" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+
