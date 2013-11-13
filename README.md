@@ -12,4 +12,6 @@ To enable the asynchronous mode at client side, add the following in wsdl(Refer 
     
     where jaxws is prefix for http://java.sun.com/xml/ns/jaxws
 
-
+Callback strategy: Client will provide AsynchHandler interface for implementing the Callback model. Once the response is received,
+the handleResponse() of AsynchHandler class will be invoked. Here the client will continue its work, until it gets response.
+Refer: CreditScoreAsynchronousCallBackTest.java
